@@ -11,6 +11,7 @@ import Foundation
 
 class Game {
     var score = 0
+    var answerIsA = ""
   
 
     private var questions = [Question]()
@@ -46,9 +47,11 @@ class Game {
     func answerCurrentQuestion(with answer: Bool) {
         if (currentQuestion.isCorrect && answer) || (!currentQuestion.isCorrect && !answer) {
             score += 1
-            
-            
+            answerIsA += "✅"
+        } else {
+            answerIsA += "❌"
         }
+        
         goToNextQuestion()
     }
 

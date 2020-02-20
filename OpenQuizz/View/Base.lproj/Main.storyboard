@@ -20,10 +20,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBh-ah-zll">
-                                <rect key="frame" x="107" y="691" width="200" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBh-ah-zll">
+                                <rect key="frame" x="107" y="762" width="200" height="80"/>
                                 <color key="backgroundColor" red="0.35870707039999999" green="0.55486404899999997" blue="0.78467851879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="YEP-Aw-0od"/>
+                                    <constraint firstAttribute="width" constant="200" id="Z7K-7T-V64"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
                                 <state key="normal" title="New Game">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -32,46 +35,91 @@
                                     <action selector="didTapNewGameButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="S1P-qZ-fvq"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="JOW-vh-xtj">
-                                <rect key="frame" x="189" y="713" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="JOW-vh-xtj">
+                                <rect key="frame" x="188.5" y="783.5" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="6Sx-91-hYO"/>
+                                    <constraint firstAttribute="width" constant="37" id="X3P-7f-F50"/>
+                                </constraints>
                             </activityIndicatorView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8n-H2-D08">
-                                <rect key="frame" x="57" y="376" width="300" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8n-H2-D08">
+                                <rect key="frame" x="57" y="297" width="300" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7RY-gX-JQj"/>
+                                    <constraint firstAttribute="width" secondItem="m8n-H2-D08" secondAttribute="height" multiplier="5:1" id="fPk-5h-Sbi"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cpt-IH-uPu" customClass="QuestionView" customModule="OpenQuizz" customModuleProvider="target">
-                                <rect key="frame" x="93" y="101" width="245" height="245"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpt-IH-uPu" customClass="QuestionView" customModule="OpenQuizz" customModuleProvider="target">
+                                <rect key="frame" x="84.5" y="44" width="245" height="245"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ou se cache la foretblablablablablanka ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dr5-aV-X2g" userLabel="Label">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon Correct" translatesAutoresizingMaskIntoConstraints="NO" id="tzI-vt-RI0">
+                                        <rect key="frame" x="104.5" y="202" width="36" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="p2a-C1-Q47"/>
+                                            <constraint firstAttribute="width" secondItem="tzI-vt-RI0" secondAttribute="height" multiplier="36:35" id="ral-tl-wsP"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ou se cache la foretblablablablablanka ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dr5-aV-X2g" userLabel="Label">
                                         <rect key="frame" x="8" y="8" width="229" height="229"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Icon Correct" translatesAutoresizingMaskIntoConstraints="NO" id="tzI-vt-RI0">
-                                        <rect key="frame" x="104" y="202" width="36" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.74747216699999997" green="0.76768189669999998" blue="0.78908354039999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dr5-aV-X2g" secondAttribute="trailing" constant="8" id="Byg-2U-noO"/>
+                                    <constraint firstAttribute="width" constant="245" id="ExD-ya-lR9"/>
+                                    <constraint firstItem="dr5-aV-X2g" firstAttribute="top" secondItem="cpt-IH-uPu" secondAttribute="top" constant="8" id="JSi-at-oyP"/>
+                                    <constraint firstItem="dr5-aV-X2g" firstAttribute="leading" secondItem="cpt-IH-uPu" secondAttribute="leading" constant="8" id="Kmm-PK-o1P"/>
+                                    <constraint firstAttribute="width" secondItem="cpt-IH-uPu" secondAttribute="height" multiplier="1:1" id="Y9p-a1-Mir"/>
+                                    <constraint firstAttribute="bottom" secondItem="tzI-vt-RI0" secondAttribute="bottom" constant="8" id="pVw-59-F5v"/>
+                                    <constraint firstAttribute="bottom" secondItem="dr5-aV-X2g" secondAttribute="bottom" constant="8" id="uem-9m-f7K"/>
+                                    <constraint firstItem="tzI-vt-RI0" firstAttribute="centerX" secondItem="cpt-IH-uPu" secondAttribute="centerX" id="z3f-W0-jIJ"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="icon" destination="tzI-vt-RI0" id="PRP-AB-8SG"/>
                                     <outlet property="label" destination="dr5-aV-X2g" id="4b7-Ou-jVm"/>
                                 </connections>
                             </view>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bravo" translatesAutoresizingMaskIntoConstraints="NO" id="KWj-4M-Uov">
-                                <rect key="frame" x="95" y="453" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXD-ng-pyv">
+                                <rect key="frame" x="147" y="378" width="120" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sXD-ng-pyv" secondAttribute="height" multiplier="15:11" id="2Ap-7V-fCu"/>
+                                    <constraint firstAttribute="width" constant="120" id="XtN-WR-0iw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game over" translatesAutoresizingMaskIntoConstraints="NO" id="XHM-hW-yUo">
+                                <rect key="frame" x="117" y="672" width="180" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="afG-VU-8Jr"/>
+                                    <constraint firstAttribute="width" constant="180" id="fp0-a2-Blv"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.34071618320000002" green="0.42130461340000003" blue="0.50840932130000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="yBh-ah-zll" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0nv-YG-9JN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yBh-ah-zll" secondAttribute="bottom" constant="20" id="0tB-ma-6nb"/>
+                            <constraint firstItem="sXD-ng-pyv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Hl-al-Rue"/>
+                            <constraint firstItem="cpt-IH-uPu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="41A-m5-fVG"/>
+                            <constraint firstItem="m8n-H2-D08" firstAttribute="top" secondItem="dr5-aV-X2g" secondAttribute="bottom" constant="16" id="8jz-gB-V7a"/>
+                            <constraint firstItem="yBh-ah-zll" firstAttribute="top" secondItem="XHM-hW-yUo" secondAttribute="bottom" constant="10" id="EYX-T6-rD7"/>
+                            <constraint firstItem="XHM-hW-yUo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pt5-rr-MS0"/>
+                            <constraint firstItem="JOW-vh-xtj" firstAttribute="centerY" secondItem="yBh-ah-zll" secondAttribute="centerY" id="Uc0-NW-DEd"/>
+                            <constraint firstItem="yBh-ah-zll" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="apR-Br-pQG"/>
+                            <constraint firstItem="cpt-IH-uPu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="eEJ-D6-Btd"/>
+                            <constraint firstItem="m8n-H2-D08" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eQ9-Os-kOA"/>
+                            <constraint firstItem="sXD-ng-pyv" firstAttribute="top" secondItem="m8n-H2-D08" secondAttribute="bottom" constant="21" id="pMG-OH-EjB"/>
+                            <constraint firstItem="JOW-vh-xtj" firstAttribute="centerX" secondItem="yBh-ah-zll" secondAttribute="centerX" id="uTD-nP-veF"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="qjO-5z-YgB" appends="YES" id="Qaj-fh-Rt4"/>
@@ -79,8 +127,9 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="JOW-vh-xtj" id="Iqf-DU-v7w"/>
+                        <outlet property="answerIs" destination="sXD-ng-pyv" id="ncZ-1R-E63"/>
+                        <outlet property="gameOverImage" destination="XHM-hW-yUo" id="Y4Y-tg-g88"/>
                         <outlet property="newGameButton" destination="yBh-ah-zll" id="mIa-kl-f9p"/>
-                        <outlet property="principalView" destination="8bC-Xf-vdC" id="ftf-aP-GQ2"/>
                         <outlet property="questionView" destination="cpt-IH-uPu" id="ZME-K7-4T7"/>
                         <outlet property="scoreLabel" destination="m8n-H2-D08" id="fC6-Rn-OFm"/>
                     </connections>
@@ -97,6 +146,6 @@
     </scenes>
     <resources>
         <image name="Icon Correct" width="36" height="35"/>
-        <image name="bravo" width="436" height="331"/>
+        <image name="game over" width="3508" height="2480"/>
     </resources>
 </document>

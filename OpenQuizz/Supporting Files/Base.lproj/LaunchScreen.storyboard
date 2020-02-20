@@ -17,6 +17,10 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="66s-1l-h3a">
                                 <rect key="frame" x="86.5" y="303" width="241" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="66s-1l-h3a" secondAttribute="height" multiplier="241:290" id="0zW-Q0-duu"/>
+                                    <constraint firstAttribute="width" constant="241" id="n5j-Ah-iyQ"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.34071618320000002" green="0.42130461340000003" blue="0.50840932130000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

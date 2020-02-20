@@ -10,11 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var principalView: UIView!
+    @IBOutlet weak var gameOverImage: UIImageView!
+    
     @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionView: QuestionView!
+    @IBOutlet weak var answerIs: UILabel!
     
     //permet de communiquer avec le modele (via propriété)
     var game = Game()
@@ -52,11 +54,13 @@ class ViewController: UIViewController {
     }
     
     private func startNewgame() {
+        gameOverImage.isHidden = true
         activityIndicator.isHidden = false
         newGameButton.isHidden = true
         questionView.title = "Loading..."
         questionView.style = .standard
         scoreLabel.text = "0/10"
+       
         
         // télécharge de nouvelles questions
         game.refresh()
@@ -123,6 +127,7 @@ class ViewController: UIViewController {
             break
         }
         
+        answerIs.text = "\(game.answerIsA)"
         scoreLabel.text = "\(game.score) / 10"
         
         // animation permettant de faire sortir la question par les bords de l'écran
@@ -169,6 +174,9 @@ class ViewController: UIViewController {
             questionView.title = game.currentQuestion.title
         case .over:
             questionView.title = "Game Over"
+            gameOverImage.isHidden = false
+            gameOverImage.transform = CGAffineTransform(scaleX: 3, y: 3)
+  
         }
         
         // animation de l'affichage de la question effet ressort "Boing"
