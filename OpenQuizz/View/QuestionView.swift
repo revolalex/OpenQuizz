@@ -10,6 +10,7 @@ import UIKit
 
 class QuestionView: UIView {
     
+    // MARK: - IBOutlets
     @IBOutlet private var label: UILabel!
     @IBOutlet private var icon: UIImageView!
     

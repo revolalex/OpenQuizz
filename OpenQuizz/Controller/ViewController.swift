@@ -9,14 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var gameOverImage: UIImageView!
     
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var gameOverImage: UIImageView!
     @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var questionView: QuestionView!
     @IBOutlet weak var answerIs: UILabel!
+
+    
+    // MARK: - Set Up
     
     //permet de communiquer avec le modele (via propriété)
     var game = Game()
@@ -49,17 +53,23 @@ class ViewController: UIViewController {
         
     }
 
+    
+    //MARK: - IBActions
+    
     @IBAction func didTapNewGameButton() {
         startNewgame()
     }
     
     private func startNewgame() {
+        answerIs.text = ""
         gameOverImage.isHidden = true
         activityIndicator.isHidden = false
         newGameButton.isHidden = true
         questionView.title = "Loading..."
         questionView.style = .standard
         scoreLabel.text = "0/10"
+        
+        
        
         
         // télécharge de nouvelles questions
@@ -84,6 +94,9 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    
+    // MARK: - Navigation
     
     private func transformQuestionViewWith(gesture: UIPanGestureRecognizer) {
         // récupere la translation du doigt sur l'écran
@@ -115,6 +128,9 @@ class ViewController: UIViewController {
             questionView.style = .incorrect
         }
     }
+    
+    
+    // MARK: - Life cycle
     
     private func answerQuestion() {
         //envoie la réponse au modele
@@ -184,18 +200,7 @@ class ViewController: UIViewController {
             self.questionView.transform = .identity
         }, completion: nil)
     }
-    
-//    func changeBackgroundColor () {
-//        UIView.animate(withDuration: 0.7) {
-//            if self.questionView.style == .correct {
-//                self.view.backgroundColor = #colorLiteral(red: 0.4816305637, green: 1, blue: 0.5521656275, alpha: 1)
-//            } else {
-//                self.view.backgroundColor = #colorLiteral(red: 0.9534618258, green: 0.5292481184, blue: 0.5808439851, alpha: 1)
-//            }
-//        }
-//    }
-//
+
  
-    
 }
 

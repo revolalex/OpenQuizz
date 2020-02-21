@@ -10,15 +10,17 @@ import Foundation
 
 
 class Game {
+    
+    // MARK: - Attributes
+    
     var score = 0
     var answerIsA = ""
-  
-
     private var questions = [Question]()
     private var currentIndex = 0
-
     var state: State = .ongoing
 
+    // MARK: - Initializers
+    
     enum State {
         case ongoing, over
     }
@@ -30,7 +32,9 @@ class Game {
     func refresh() {
         score = 0
         currentIndex = 0
+        answerIsA = ""
         state = .over
+        
         
         // fermeture permet de recevoir la question
         QuestionManager.shared.get {(questions) in
