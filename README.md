@@ -6,7 +6,7 @@
 - Structure
 - Fonts, Info.plist, Balham.otf
 - LaunchScreen.storyboard
-- closures
+- Closures
 - Notification
 - Outlet
 - addObserver
