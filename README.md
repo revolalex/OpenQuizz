@@ -2,9 +2,6 @@
 # An iOS quizz app design with MVC architecture (design pattern)
 
 
-<img width="200" alt="Simulator Screen Shot" src="https://user-images.githubusercontent.com/56839789/77522054-e3cf3480-6e83-11ea-8d6c-78ccfa550ae8.gif"> 
-
-
 - MVC design pattern
 - Structure
 - Fonts, Info.plist, Balham.otf
@@ -18,6 +15,7 @@
 - CGAffineTransform
 
 
+<img width="200" alt="Simulator Screen Shot" src="https://user-images.githubusercontent.com/56839789/77522054-e3cf3480-6e83-11ea-8d6c-78ccfa550ae8.gif"> 
 
 
 
