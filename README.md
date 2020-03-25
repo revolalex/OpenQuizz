@@ -14,6 +14,9 @@
 - UIView Animation
 - CGAffineTransform
 
+<img width="200" alt="Simulator Screen Shot" src="https://user-images.githubusercontent.com/56839789/77524369-80df9c80-6e87-11ea-848d-e97d28d40455.png"> 
+
+
 
 <img width="200" alt="Simulator Screen Shot" src="https://user-images.githubusercontent.com/56839789/77522054-e3cf3480-6e83-11ea-8d6c-78ccfa550ae8.gif"> 
 
